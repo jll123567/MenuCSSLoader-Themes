@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap'); /* Import font */
+
+:root {
+    --tblack: rgba(0,0,0,0.9); /* for postarity, but cohtml doesnt support color vars with alpha? */
+    --highlight: rgb(72, 72, 72);
+}
+
+/* background and pages */
+body {
+    font-family: Inconsolata;
+}
+
+
+.content {
+    background: rgba(0,0,0,0.9);
+    color: white;
+    border: 2px solid white; 
+}
+
+.content > div{
+    background: transparent);
+    border: 2px solid white;
+    border-radius: 0px;
+}
+
+/* buttons and input */
+.button:hover{
+    background-color: var(--highlight);
+}
+
+.button:active{
+    background-color: black;
+    filter: invert(100%);
+}
+
+.button.active{
+    background-color: black;
+    filter: invert(100%);
+}
+
+.action-btn{
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 0px;
+}
+
+.action-btn.disabled{
+    filter: brightness(50%);
+}
+
+.tab-btn {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 0px;
+    border-bottom: 0px;
+}
+
+.tab-btn.disabled {
+    visibility: hidden;
+}
+
+.content-btn {
+    border: 2px solid white;
+    border-radius: 0px;
+}
+
+.inp_slider, .inp_dropdown, .inp_btn_action, .imperialDisplay {
+    border: 2px solid white;
+}
+
+.valueList {
+    border: 2px solid white;
+    background: black;
+}
+
+.valueList .listValue + .listValue {
+    border-top: 2px solid white;
+}
+
+.inp_toggle{
+    border: 2px solid white;
+    background: red;
+}
+
+.inp_toggle.checked{
+    background: green;
+}
+
+.inp_button {
+    color: white;
+    background: black;
+    border-radius: 0px;
+    border: solid 2px white;
+}
+
+/* Dynamic content cells */
+.content-cell {
+    border: 2px solid white;
+    border-radius: 0px;
+}
+
+.list-filter .button {
+    border: 2px solid white;
+    border-radius: 0px;
+}
+
+/* Toolbar */
+.toolbar {
+    background: rgba(0,0,0,0.9);
+    color: white;
+    border: 2px solid white;
+}
+
+.toolbar-btn + .toolbar-btn {
+    border: 2px solid white;
+    border-radius: 0px;
+}
+
+.toolbar-btn-double {
+    border: 2px solid white;
+    border-radius: 0px;
+}
+
+.toolbar-btn.disabled {
+    filter: brightness(50%);
+}
+
+.tab_btn_settings + div {
+    font-size: 32px;
+}
+
+#search-btn {
+    font-size: 40px;
+}
+
+/* Home */
+
+#home .content-shortcuts .action-btn { /* Make the shortcut buttons not dependant on font size */
+    font-size: 25px;
+    width: 31%;
+    height: 175px;
+}
+
+#home .content-shortcuts-2 .action-btn {
+    font-size: 25px;
+    width: 31%;
+    height: 175px;
+}
+
+.content-debug {
+    font-size: 30px;
+}
+
+#home .content-panic .btn-row-wrapper .action-btn{
+    font-size: 25px;
+    height: 192px;
+}
+
+.content-call{  /* Calls are not implemented, Yell at me when they are... */
+    visibility: hidden;
+}
+
+/* Detail pages */
+
+#world-detail,#instance-detail,#user-detail,#avatar-detail,#prop-detail {
+    background: black;
+}
+
+.world-instancing {
+    background: black;
+}
+
+.world-instancing .btn-region:active {
+    filter: invert(0%);
+}
+
+.btn-region .region-select {
+    background-color: black;
+}
+
+.btn-region .region-select:hover, .btn-rule .rule-select:hover{
+    background-color: var(--highlight);
+}
+
+.btn-region .region-select:active, .btn-rule .rule-select:active{
+    filter: invert(100%);
+}
+
+.btn-region .region-select.active, .btn-rule .rule-select.active {
+    background-color: white;
+    color: black;
+}
+
+.btn-region .region-select + .region-select, .btn-rule .rule-select + .rule-select {
+    border-left: 2px solid white;
+}
+
+#user-detail .user-tabview {
+    border: 0px;
+}
+
+.tab-contents {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 0px;
+}
+
+#tab-content-activity .player-instance-rules{
+    border: 2px solid white;
+    border-radius: 0px;
+}
+
+#tab-content-activity .player-instance-players{
+    border: 2px solid white;
+    border-radius: 0px;
+}
+
+.activityDataOffline  {
+    border: 2px solid white;
+    border-radius: 0px;
+}
+
+.avatar-sidebar p, .prop-sidebar p, .content-world-information p, {
+    font-size: 30px;
+}
+
+/* AAS */
+#avatar-settings {
+    background: black;
+}
+
+/* Keyboard */
+
+#keyboard {
+    background: black;
+    border: solid 2px white;
+    border-radius: 0px;
+}
+
+.keyboard-row + .keyboard-row {
+    border-top: solid 2px white;
+}
+
+.keyboard-key + .keyboard-key, .keyboard-key + .keyboard-mod, .keyboard-key + .keyboard-func, .keyboard-mod + .keyboard-key, .keyboard-mod + .keyboard-mod, .keyboard-mod + .keyboard-func, .keyboard-func + .keyboard-key, .keyboard-func + .keyboard-mod, .keyboard-func + .keyboard-func{
+    border-left: solid 2px white;
+}
+
+.keyboard-key:hover, .keyboard-mod:hover, .keyboard-func:hover, .keyboard-key.active, .keyboard-mod.active, .keyboard-func.active{
+    background: var(--highlight);
+}
+
+/* Search */
+.search-results-header{
+    border: solid 2px white;
+    border-radius: 0px;
+}
+
+/* Message boxes */
+
+.message-box {
+  border: 2px solid white;
+  background-color: black;
+  border-radius: 0px;
+}
+
+.message-box.alert-timed-box .message-time {
+  border: 2px solid white;
+  border-radius: 0px;
+}
+
+.message-box.alert-timed-box .message-time .message-time-bar {
+    border: none;
+} 
