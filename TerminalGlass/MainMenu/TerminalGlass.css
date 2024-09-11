@@ -3,6 +3,7 @@
 :root {
     --tblack: rgba(0,0,0,0.9); /* for postarity, but cohtml doesnt support color vars with alpha? */
     --highlight: rgb(72, 72, 72);
+    --brightGreen: #00CC00;
 }
 
 /* background and pages */
@@ -18,7 +19,7 @@ body {
 }
 
 .content > div{
-    background: transparent);
+    background: transparent;
     border: 2px solid white;
     border-radius: 0px;
 }
@@ -64,7 +65,7 @@ body {
     border-radius: 0px;
 }
 
-.inp_slider, .inp_dropdown, .inp_btn_action, .imperialDisplay {
+.inp_slider, .inp_dropdown, .inp_btn_action, .imperialDisplay, .inp_number, .inp_joystick,  .inp_sliderH, .inp_dropdown_large{
     border: 2px solid white;
 }
 
@@ -83,7 +84,7 @@ body {
 }
 
 .inp_toggle.checked{
-    background: green;
+    background-color: var(--brightGreen);
 }
 
 .inp_button {
@@ -99,12 +100,26 @@ body {
     border-radius: 0px;
 }
 
+.user-public-content, .user-public-content .detail-btn {
+    border: solid 2px white;
+    border-radius: 0px;
+}
+
+.user-public-content .detail-btn:hover {
+    background-color: var(--highlight);
+}
+
 .list-filter .button {
     border: 2px solid white;
     border-radius: 0px;
 }
 
-/* Toolbar */
+#friends .list-content{
+    padding-right: 0%;
+    width: 94%;
+}
+
+/* Toolbars */
 .toolbar {
     background: rgba(0,0,0,0.9);
     color: white;
@@ -112,7 +127,7 @@ body {
 }
 
 .toolbar-btn + .toolbar-btn {
-    border: 2px solid white;
+    border-left: 2px solid white;
     border-radius: 0px;
 }
 
@@ -130,21 +145,28 @@ body {
 }
 
 #search-btn {
-    font-size: 40px;
+    font-size: 45px;
+}
+
+.time-display {
+    font-size: 45px;
+    height: 45%;
+    line-height: 200%;
+    text-align: center;
 }
 
 /* Home */
 
 #home .content-shortcuts .action-btn { /* Make the shortcut buttons not dependant on font size */
-    font-size: 25px;
-    width: 31%;
+    font-size: 28px;
+    width: 175px;
     height: 175px;
 }
 
 #home .content-shortcuts-2 .action-btn {
-    font-size: 25px;
-    width: 31%;
-    height: 175px;
+    font-size: 28px;
+    width: 150px;
+    height: 150px;
 }
 
 .content-debug {
@@ -152,7 +174,7 @@ body {
 }
 
 #home .content-panic .btn-row-wrapper .action-btn{
-    font-size: 25px;
+    font-size: 29px;
     height: 192px;
 }
 
@@ -160,10 +182,36 @@ body {
     visibility: hidden;
 }
 
+.content-avatar-functions .actions .button {
+    font-size: 30px;
+    width: 128px;
+    height: 128px;
+}
+
+
 /* Detail pages */
 
 #world-detail,#instance-detail,#user-detail,#avatar-detail,#prop-detail {
     background: black;
+}
+
+/* World detail */
+
+.cell-value.data-description{
+    margin-left: 1.5em;
+}
+
+.data-worldPreload.row2.col2{
+    width: 192px;
+    height: 192px;
+    left: 745.6px;
+    bottom: -16px;
+    font-size: 28px;
+}
+
+.world-instance {
+    border: solid 2px white;
+    border-radius: 0px;
 }
 
 .world-instancing {
@@ -195,6 +243,17 @@ body {
     border-left: 2px solid white;
 }
 
+/* instance detail */
+.content-instance-buttons .instance-btn + .instance-btn{
+    border-left: solid 2px white;
+}
+
+/* User detail */
+
+.profile-group {
+    display: none; /* Groups aren't a thing (yet) */
+}
+
 #user-detail .user-tabview {
     border: 0px;
 }
@@ -215,13 +274,37 @@ body {
     border-radius: 0px;
 }
 
-.activityDataOffline  {
+.activityDataUnavailableInfo, .activityDataNone{
     border: 2px solid white;
     border-radius: 0px;
 }
 
-.avatar-sidebar p, .prop-sidebar p, .content-world-information p, {
-    font-size: 30px;
+.invite-request-btn {
+    line-height: 0.9em;
+}
+
+#user-detail .user-settings-dialog {
+    border: solid 2px white;
+    border-radius: 0px;
+    background: black;
+}
+
+.user-settings-dialog .inp_dropdown, .user-settings-dialog .valueList{
+    width: 100%;
+    font-size: 25px;
+}
+
+.user-settings-dialog .valueList {
+    background: black;
+}
+
+/* Avatar/Prop detail */
+
+.avatar-sidebar p, .prop-sidebar p{
+    margin: 28px 0;
+}
+.uploaded span, .updated span{
+    font-size: 28px;
 }
 
 /* AAS */
@@ -245,8 +328,27 @@ body {
     border-left: solid 2px white;
 }
 
-.keyboard-key:hover, .keyboard-mod:hover, .keyboard-func:hover, .keyboard-key.active, .keyboard-mod.active, .keyboard-func.active{
-    background: var(--highlight);
+.keyboard-key:hover, .keyboard-mod:hover, .keyboard-func:hover{
+    background-color: var(--highlight);
+}
+
+
+.keyboard-key.active, .keyboard-mod.active, .keyboard-func.active{
+    background-color: black; 
+    filter: invert(100%);
+}
+
+#numpad {
+    border: none;
+    background: black;
+}
+
+.numpad-row + .numpad-row, .numpadButton.horizontal + .numpadButton.horizontal {
+    border-top: 3px solid white;
+}
+
+.numpadButton + .numpadButton, .numpadButton.horizontal {
+    border-left: 3px solid white;
 }
 
 /* Search */
@@ -254,6 +356,28 @@ body {
     border: solid 2px white;
     border-radius: 0px;
 }
+
+.inp_search{
+    border-radius: 0px;
+    border: solid 2px white;
+    background: black;
+    color: white;
+}
+
+/* Messages */
+.message-content, .noMessagesInfo{
+    border: 2px solid white;
+    border-radius: 0px;
+}
+
+.message-image{
+    border-right: 2px solid white;
+}
+
+.message-btn{
+    border-left: 2px solid white;
+}
+
 
 /* Message boxes */
 
@@ -270,4 +394,15 @@ body {
 
 .message-box.alert-timed-box .message-time .message-time-bar {
     border: none;
-} 
+}
+
+/* Settings */ 
+
+#IKCalibrationMode .dropdown-value {
+    font-size: 40px;
+}
+
+/* Exit */
+.content .exit-spacer{
+    background: url(gfx/warning.svg); /* can only grab allowed files from local system! everything else must be from a web host! */
+}
