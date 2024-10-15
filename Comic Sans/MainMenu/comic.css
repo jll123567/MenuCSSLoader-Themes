@@ -1,0 +1,16 @@
+/* latin */
+@font-face {
+  font-family: "Comic Sans";
+  src: url("https://archive.org/download/776e6c6f6164732f496d6167/COMIC.TTF");
+}
+
+* {
+  font-family: "Comic Sans", "cursive";
+}
+
+.content {
+	background-image: url("https://files.catbox.moe/xp5eec.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 100%;
+}

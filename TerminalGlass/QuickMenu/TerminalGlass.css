@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap'); /* Import font */
+
+:root {
+  --highlight: rgb(72, 72, 72);
+  --tblack: rgba(0,0,0,0.9);
+  --font-size-nrm: 20px;
+  --font-size-big: 32px;
+  --font-size-bigger: 44px;
+  --font-size-biggest: 50px;
+}
+
+#quickmenu-wrapper {
+    font-family: Inconsolata;
+    font-size: 20px;
+}
+
+#quickmenu-wrapper .valueList {
+    background-color: black;
+}
+
+#quickmenu-wrapper .quick-buttons-container .quick-button, #quickmenu-wrapper .primary-buttons-container .quick-button, #quickmenu-wrapper .toolbar-container, #quickmenu-wrapper .game-information-container{
+  border-radius: 0px;
+  border: solid 4px white;
+  background-color: var(--tblack);
+}
+
+#quickmenu-wrapper .quick-buttons-container .quick-button:active, #quickmenu-wrapper .primary-buttons-container .quick-button:active {
+  filter: invert(100%);
+}
+
+#quickmenu-wrapper .quick-buttons-container .quick-button:hover, #quickmenu-wrapper .primary-buttons-container .quick-button:hover {
+  background-color: var(--highlight);
+}
+
+#quickmenu-wrapper .quick-buttons-container .quick-button .inner-toggle, #quickmenu-wrapper .primary-buttons-container .quick-button .inner-toggle {
+    border-radius: 0px;
+    border: solid 2px white;
+}
+
+
+#quickmenu-wrapper .notification-container {
+  border-radius: 0px;
+  border: solid 4px white;
+  background: rgba(0,0,0,0.9);
+}
+
+#quickmenu-wrapper .notification-container .notifications-wrapper {
+    border-top: solid 4px white;
+    left: 0;
+    width: 730px;
+}
+
+#quickmenu-wrapper .notification-container .header-button , #quickmenu-wrapper .notification-container .header-text, #quickmenu-wrapper .notification-container .header-image{
+    top: 35px;
+}
+
+#quickmenu-wrapper .avatar-actions .container-emotes, #quickmenu-wrapper .avatar-actions .container-states, #quickmenu-wrapper .avatar-actions .container-back {
+  border-radius: 0px;
+  border: solid 4px white;
+  background-color: var(--tblack);
+}
+
+#quickmenu-wrapper .avatar-actions .container-emotes .header, #quickmenu-wrapper .avatar-actions .container-states .header{
+    border-bottom: solid 4px white;
+    margin-left: 0;
+    padding-left: 29px;
+}
+
+#quickmenu-wrapper .avatar-actions .container-emotes .emote, #quickmenu-wrapper .avatar-actions .container-states .state{
+    margin: 0;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left: 1em;
+}
+
+#quickmenu-wrapper .avatar-actions .container-emotes .emote:hover, #quickmenu-wrapper .avatar-actions .container-states .state:hover{
+    background-color: var(--highlight);
+}
+
+#quickmenu-wrapper .advanced-avatar .container-settings, #quickmenu-wrapper .advanced-avatar .container-profiles, #quickmenu-wrapper .advanced-avatar .container-back {
+  border-radius: 0px;
+  border: solid 4px white;
+  background-color: var(--tblack);
+}
+
+#quickmenu-wrapper .debug .container-details, #quickmenu-wrapper .debug .container-categories, #quickmenu-wrapper .debug .container-back{
+  border-radius: 0px;
+  border: solid 4px white;
+  background-color: var(--tblack);
+}
+
+
+#quickmenu-wrapper .container-tabs .tab {
+  border-radius: 0px;
+  border: solid 4px white;
+  background-color: var(--tblack);
+}
+
+#quickmenu-wrapper .container-tabs .tab:hover{
+    background-color: var(--highlight);
+}
+
+#quickmenu-wrapper .container-tooltip, #quickmenu-wrapper .container-alertToast, #quickmenu-wrapper .btk-popup-container {
+  border-radius: 0px;
+  border: solid 4px white;
+  background-color: black;
+}
+
+#quickmenu-wrapper .btk-popup-container .button {
+    border-radius: 0px;
+}
+
+/* Just make the font a bit smaller lol */
+#quickmenu-wrapper .call-container .status, 
+#quickmenu-wrapper .call-container .time {
+    font-size: 20px;
+}
+
+#quickmenu-wrapper .call-container .sender-name, 
+#quickmenu-wrapper .notification-container .header-text, 
+#quickmenu-wrapper .notification-container .notifications-wrapper .notification .header, 
+#quickmenu-wrapper .quick-buttons-container .quick-button,
+#quickmenu-wrapper .primary-buttons-container .quick-button, 
+#quickmenu-wrapper .game-information-container .game-fps-caption, 
+#quickmenu-wrapper .game-information-container .game-fps-value, 
+#quickmenu-wrapper .game-information-container .game-ping-caption, 
+#quickmenu-wrapper .game-information-container .game-ping-value, 
+#quickmenu-wrapper .avatar-actions .container-emotes .emote, 
+#quickmenu-wrapper .avatar-actions .container-states .state, 
+#quickmenu-wrapper .advanced-avatar .container-profiles .profile, 
+#quickmenu-wrapper .advanced-avatar .container-profiles .profile-buttons .button .caption, 
+#quickmenu-wrapper .inp_number {
+    font-size: 32px;
+}
+
+#quickmenu-wrapper .game-information-container .game-greeting,
+#quickmenu-wrapper .avatar-actions .container-emotes .header,
+#quickmenu-wrapper .avatar-actions .container-states .header,
+#quickmenu-wrapper .avatar-actions .container-back .content,
+#quickmenu-wrapper .advanced-avatar .container-settings .header,
+#quickmenu-wrapper .advanced-avatar .container-profiles .header,
+#quickmenu-wrapper .advanced-avatar .container-back .content,
+#quickmenu-wrapper .debug .container-details .header,
+#quickmenu-wrapper .debug .container-details .loadingHeader,
+#quickmenu-wrapper .debug .container-details .loadingEntry,
+#quickmenu-wrapper .debug .container-categories .header,
+#quickmenu-wrapper .debug .container-back .content,
+#quickmenu-wrapper .move-overlay .info-description{
+    font-size: 44px;
+}
+
+#quickmenu-wrapper .move-overlay .info-headline{
+    font-size: 50px;
+}
+
+
+/* BTKUI stuff */
+.btkUI .container-main, .btkUI .container-controls {
+  border-radius: 0px;
+  border: solid 4px white;
+  background-color: var(--tblack);
+}
+
+.btkUI .container-controls-playerlist {
+    background-color: black;  /* why is the header just lazily hidden behind the player list? */
+    border-radius: 0px;
+    border: solid 4px white;
+}
+
+/*.btkUI .dropdown-option .selected {
+    color: white;
+}*/
+
+.btkUI .toggle, .btkUI .button, .btkUI .button-fullImage, .btkUI .int-button {
+    border-radius: 0px;
+}
+
+.btkUI .toggle:hover, .btkUI .button:hover, .btkUI .button-fullImage:hover, .btkUI .int-button:hover {
+    background-color: var(--highlight);
+}
+
+.btkUI .toggle:active, .btkUI .button:active, .btkUI .int-button:active {
+    filter: invert(100%);
+}
